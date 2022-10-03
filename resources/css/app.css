@@ -1,0 +1,8 @@
+@import "bootstrap";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.width-1200{
+    width: 1200px;
+}
+
