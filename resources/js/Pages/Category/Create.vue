@@ -44,6 +44,7 @@ export default {
     },
     methods: {
         submit() {
+            // its much better to use form helper method .post. For ex. this.form.post(route('categories.store'))
             this.$inertia.post(route('categories.store'), this.form, {
                 onSuccess: () => {
                     this.message = "Created category successfully"

@@ -5,6 +5,7 @@
             <h1 class="h1 text-center mb-5">You opened this product</h1>
             <div class="justify-content-center d-flex">
                 <div class="card" style="width: 18rem;">
+                    <!--If our application uses photos on hundreds of location, will we always do this with substring?-->
                     <img :src="'/storage/'+product.image.substring(6)" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title fw-bold">{{product.name}}</h5>

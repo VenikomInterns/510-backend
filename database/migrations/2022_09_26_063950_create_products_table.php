@@ -17,11 +17,11 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('description');
-            $table->unsignedMediumInteger('price');
+            $table->unsignedMediumInteger('price'); 
             $table->longText('image');
             $table->foreignId('category_id')->constrained();
             $table->timestamps();
-        });
+        });//good
     }
 
     /**

@@ -17,4 +17,5 @@ class ProductApiController
     {
         return $product;
     }
+    // Its good practise to wrap API responses with JsonResource::make or JsonResource::collection
 }

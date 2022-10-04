@@ -12,19 +12,20 @@ class CategoryController extends Controller
 {
     public function index(): Response
     {
+        //you dont need to call ->all() after ->get()
         $categories = Category::query()->get()->all();
         return Inertia::render('Category/Index', compact('categories'));
-    }
+    } 
 
     public function show(Category $category): Response
     {
         return Inertia::render('Category/Show', compact('category'));
-    }
+    } //excellent
 
     public function edit(Category $category): Response
     {
         return Inertia::render('Category/Edit', compact('category'));
-    }
+    }//excellent
 
     public function update(Category $category, Request $request): RedirectResponse
     {
@@ -34,18 +35,18 @@ class CategoryController extends Controller
         $category->fill($validated);
         $category->save();
         return redirect()->back();
-    }
+    }//excellent
 
     public function destroy(Category $category): RedirectResponse
     {
-        $category->delete();
+        $category->delete(); //what if this category has products?
         return redirect()->route('categories.index');
     }
 
     public function create(): Response
     {
         return Inertia::render('Category/Create');
-    }
+    }//excellent
 
     public function store(Request $request): RedirectResponse
     {
@@ -54,6 +55,6 @@ class CategoryController extends Controller
         ]);
         Category::query()->create($validated);
         return redirect()->back();
-    }
+    }//excellent
 
 }

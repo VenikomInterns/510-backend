@@ -27,6 +27,7 @@
                             <div class="col-12 col-md-5 mb-3">
                                 <label class="form-label" for="category">Category: </label>
                                 <select class="form-select" id="category" v-model="form.category_id">
+                                    <!---Missing :key="" attribute-->
                                     <option v-for="category in categories"  :value="category.id">{{category.name}}</option>
                                 </select>
                             </div>
@@ -76,6 +77,7 @@ export default {
     },
     methods: {
         onFileSelected(e){
+            //what if user click cancel on select file dialog. This will result in console log error 
             this.form.image = e.target.files[0];
         },
         submit() {

@@ -20,7 +20,7 @@ class AdminSeeder extends Seeder
             'name'=>'admin',
             'email'=>'admin@gmail.com',
             'password'=>Hash::make('admin123'),
-            'is_admin'=>'1',
+            'is_admin'=>'1', //you can use true instead of '1'
         ]);
     }
 }

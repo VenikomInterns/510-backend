@@ -70,6 +70,7 @@ export default {
     },
 
     setup(props) {
+        //why not useForm(...props.product, ...{image:null, _method:PUT})
         const form = useForm({
             _method:"PUT",
             name: props.product.name,

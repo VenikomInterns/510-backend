@@ -17,6 +17,6 @@ class CategoryApiController
     public function index(): Paginator
     {
         return Category::query()->simplePaginate(10);
-    }
+    } //it's good pratice to wrap API response with JsonResource::collection()
 
 }
